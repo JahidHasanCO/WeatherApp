@@ -60,12 +60,12 @@ class HomeFragment : Fragment() {
                     is ApiState.Success -> {
                         binding.recyclerview.isVisible = true
                         binding.progressBar.isVisible = false
-                        cityAdapter.setData(it.data)
+                        cityAdapter.setData(it.data.list)
                         cityAdapter.notifyDataSetChanged()
-
+                        Log.d("main", "onCreate: ${it.data}")
                     }
                     is ApiState.Empty -> {
-
+                        Log.d("main", "onCreate: Empty")
                     }
                 }
 

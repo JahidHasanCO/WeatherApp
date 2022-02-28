@@ -9,7 +9,7 @@ data class CityList(
     @SerializedName("count")
     val count: Int,
     @SerializedName("list")
-    val Result: List<Result>,
+    val list: List<list>,
     @SerializedName("message")
     val message: String
 )

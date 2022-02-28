@@ -13,6 +13,28 @@
         tools:context=".presentation.fragment.HomeFragment">
 
 
+        <com.google.android.material.appbar.AppBarLayout
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            >
+            <androidx.appcompat.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/toolbar"
+                android:background="@color/purple_200"
+                android:minHeight="?attr/actionBarSize"
+                app:title="WeatherApp"
+                app:titleTextColor="@color/white"
+                >
+
+
+            </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.AppBarLayout>
+
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerview"
             android:layout_width="0dp"

@@ -33,7 +33,7 @@ class SplashScreenFragment : Fragment() {
 //        binding.root.findNavController().navigate(SplashScreenFragmentDirections.actionSplashScreenFragmentToHomeFragment())
         Handler().postDelayed({
             binding.root.findNavController().navigate(SplashScreenFragmentDirections.actionSplashScreenFragmentToHomeFragment())
-        }, 600)
+        }, 1000)
     }
 
 }

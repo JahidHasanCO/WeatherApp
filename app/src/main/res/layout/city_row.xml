@@ -6,6 +6,7 @@
     </data>
 
     <LinearLayout
+        android:id="@+id/fullRow"
         android:layout_width="match_parent"
         android:layout_height="70dp"
         android:orientation="horizontal"
@@ -24,7 +25,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="25C"
-                android:textStyle="bold"
                 android:textSize="15sp"
                 android:fontFamily="@font/roboto"
                 android:textColor="@color/black" />
@@ -47,7 +47,6 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:text="25C"
-            android:textStyle="bold"
             android:textSize="25sp"
             android:gravity="center"
             android:fontFamily="@font/roboto"

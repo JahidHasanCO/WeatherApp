@@ -4,11 +4,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.weatherapp.data.ListCity.Result
+import com.example.weatherapp.data.ListCity.list
 import com.example.weatherapp.databinding.CityRowBinding
 
 
-class CityAdapter(private var cityList: List<Result>)
+class CityAdapter(private var cityList: List<list>)
     : RecyclerView.Adapter<CityAdapter.CityViewHolder>() {
     private lateinit var binding:CityRowBinding
 
@@ -21,6 +21,10 @@ class CityAdapter(private var cityList: List<Result>)
 
     override fun onBindViewHolder(holder: CityViewHolder, position: Int) {
         binding.cityName.text=cityList[position].name
+        binding.status.text = cityList[position].weather[0].main
+
+        binding.temp.text = cityList[position].main.temp.toString() + " \u2103"
+
     }
 
     override fun getItemCount(): Int = cityList.size
@@ -29,7 +33,7 @@ class CityAdapter(private var cityList: List<Result>)
 
     }
 
-    fun setData(postList: List<Result>)
+    fun setData(postList: List<list>)
     {
         this.cityList=postList
         notifyDataSetChanged()

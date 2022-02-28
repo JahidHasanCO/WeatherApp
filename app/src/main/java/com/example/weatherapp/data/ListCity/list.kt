@@ -3,7 +3,7 @@ package com.example.weatherapp.data.ListCity
 
 import com.google.gson.annotations.SerializedName
 
-data class Result(
+data class list(
     @SerializedName("clouds")
     val clouds: Clouds,
     @SerializedName("coord")

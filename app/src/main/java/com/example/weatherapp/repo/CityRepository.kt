@@ -1,8 +1,7 @@
 package com.example.weatherapp.repo
 
 import com.example.weatherapp.data.ListCity.CityList
-import com.example.weatherapp.data.ListCity.Result
-import com.example.weatherapp.network.ApiService
+import com.example.weatherapp.data.ListCity.list
 import com.example.weatherapp.network.ApiServiceImpl
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
@@ -14,7 +13,7 @@ class CityRepository
 @Inject
 constructor(private val apiServiceImpl: ApiServiceImpl) {
 
-    fun getCitys(): Flow<List<Result>> = flow {
+    fun getCitys(): Flow<CityList> = flow {
         emit(apiServiceImpl.getCitys())
     }.flowOn(Dispatchers.IO)
 
