@@ -23,7 +23,7 @@ class SplashScreenFragment : Fragment() {
         // Inflate the layout for this fragment
         binding = FragmentSplashScreenBinding.inflate(inflater, container, false)
 
-        return view
+        return binding.root
     }
 
 
