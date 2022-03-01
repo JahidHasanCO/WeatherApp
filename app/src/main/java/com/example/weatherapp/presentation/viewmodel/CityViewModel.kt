@@ -1,11 +1,8 @@
 package com.example.weatherapp.presentation.viewmodel
 
-import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.weatherapp.Utils.ApiState
-import com.example.weatherapp.Utils.Resource
-import com.example.weatherapp.data.ListCity.CityList
 import com.example.weatherapp.repo.CityRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
