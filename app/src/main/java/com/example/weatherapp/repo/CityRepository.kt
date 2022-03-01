@@ -1,6 +1,7 @@
 package com.example.weatherapp.repo
 
 import com.example.weatherapp.data.ListCity.CityList
+import com.example.weatherapp.data.ListCity.Weather
 import com.example.weatherapp.data.ListCity.list
 import com.example.weatherapp.network.ApiServiceImpl
 import kotlinx.coroutines.Dispatchers
@@ -15,6 +16,10 @@ constructor(private val apiServiceImpl: ApiServiceImpl) {
 
     fun getCitys(): Flow<CityList> = flow {
         emit(apiServiceImpl.getCitys())
+    }.flowOn(Dispatchers.IO)
+
+    fun getTemp(lat:String,lon:String): Flow<Weather> = flow {
+        emit(apiServiceImpl.getTemp(lat, lon))
     }.flowOn(Dispatchers.IO)
 
 }
